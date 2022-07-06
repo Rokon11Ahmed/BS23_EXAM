@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.home.HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/shortByTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_short_by"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/shortByRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/shortByTitleTextView"
+        app:layout_constraintStart_toEndOf="@id/shortByTitleTextView"
+        app:layout_constraintTop_toTopOf="@id/shortByTitleTextView">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/last_update_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/last_update" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/star_count_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/star_count" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repository_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/shortByTitleTextView"
+        tools:listitem="@layout/layout_repository_item" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

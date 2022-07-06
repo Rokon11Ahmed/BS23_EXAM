@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BS23 Exam</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="details_fragment">Details Fragment</string>
+    <string name="title_short_by">Short By: </string>
+    <string name="last_update">Last Update</string>
+    <string name="star_count">Star Count</string>
+    <string name="owner_details">Owner Details</string>
+    <string name="repo_details">Repository Details</string>
+    <string name="repo_description">Description</string>
+    <string name="name">Name</string>
+</resources>
